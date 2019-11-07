@@ -145,7 +145,7 @@ function message(){
 }
 
 var greeting = motivation('Billy', 'Bob'); // 'You're doing awesome keep it up Billy Bob.
-console.log(greeting)
+// console.log(greeting)
 
 
 
@@ -222,11 +222,27 @@ function secretNumber() {
   Fix the code below to log the desired output.
 */
 
-function timeOutCounter() {
-  for (var i = 0; i <= 5; i++) {
-    setTimeout(function() {
-      console.log(i);
-    }, i * 1000);
+// function timeOutCounter() {
+//   for (var i = 0; i <= 5; i++) {
+    
+//     setTimeout(function() {
+
+//       console.log(i)
+//     }
+//     , i * 1000);
+//   }
+// }
+// timeOutCounter();
+// // console.log(timeOutCounter())
+
+
+
+function timeOutCounter(){
+  for (let i=0; i<=5; i++){
+    setTimeout(function(){
+      console.log(i)
+    }, i*1000)
   }
 }
-timeOutCounter();
+
+timeOutCounter()
