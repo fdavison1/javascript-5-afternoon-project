@@ -97,13 +97,27 @@ var count = makeCounter();
 
 function counterFactory(value) {
   // Code here.
+  let val = 0
+
 
   return {
+
+    inc: val => {
+      value++
+      return value
+    }, 
+
+    dec: val => {
+      value--
+      return value
+    }
 
   };
 }
 
 counter = counterFactory(10);
+// console.log(counterFactory(10))
+// console.log(counter.inc())
 // counter.inc() // 11
 // counter.inc() // 12
 // counter.inc() // 13
@@ -123,12 +137,15 @@ function motivation( firstname, lastname ) {
   var welcomeText = "You're doing awesome, keep it up";
 
   // code message function here.
-
+function message(){
+  return welcomeText+` ${firstname} ${lastname}.`
+}
   //Uncommment this to return the value of your message function
-  //return message;
+  return message;
 }
 
 var greeting = motivation('Billy', 'Bob'); // 'You're doing awesome keep it up Billy Bob.
+console.log(greeting)
 
 
 
