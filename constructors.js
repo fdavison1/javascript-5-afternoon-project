@@ -149,12 +149,12 @@ User.prototype.changePostRating = function(id, newRating){
   
   let i = this.savedPosts.findIndex(post => post.id === id)
 
-console.log('fred', i)
+// console.log('fred', i)
 
   this.savedPosts[i] = {...this.savedPosts[i], rating: newRating}
 
   
- console.log(this.savedPosts)
+//  console.log(this.savedPosts)
   
 }
   
