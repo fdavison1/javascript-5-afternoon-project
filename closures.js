@@ -21,14 +21,15 @@ function outer() {
   Above you're given a function that returns another function which has a closure over the name variable.
   Invoke outer saving the return value into another variable called 'inner'.
 */
-  
 // Code Here
+const inner = outer()
 
 
 
 //Once you do that, invoke inner.
-
 //Code Here
+inner()
+
 
 
 
@@ -50,27 +51,36 @@ function callFriend(name) {
   When callJake is invoked with '435-555-9248', it returns 'Calling Jake at 435-555-9248' 
   (HINT: You will need to pass in arguments to both function invocations)
 */
-
 //Code Here
 
+const callJake = callFriend("Jake")
+callJake('435-555-9248')
 
 
 ////////// PROBLEM 3 //////////
-
 /*
   Write a function called makeCounter that makes the following code work properly.
 */
-
 //Code Here
+//makeCounter
+function makeCounter(){
+  let num = 0
+  return function inner() {
+    num++
+    return num
+  }
+}
 
 
 
 //Uncomment this once you make your function
-//   var count = makeCounter();
-//   count(); // 1
-//   count(); // 2
-//   count(); // 3
-//   count(); // 4
+var count = makeCounter();
+// console.log(count())
+
+  count(); // 1
+  count(); // 2
+  count(); // 3
+  count(); // 4
 
 
 
