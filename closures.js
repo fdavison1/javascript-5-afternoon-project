@@ -150,7 +150,6 @@ console.log(greeting)
 
 
 ////////// PROBLEM 6 //////////
-
 /*
   Inside the module's return object create a publicMethod function that invokes privateMethod (return the result).
   Invoke this by calling module.publicMethod(); outside the module scope
@@ -171,6 +170,8 @@ var module = (function() {
   // outside our lexical scope
   return {
     // Code here.
+    publicMethod: () => privateMethod()
+    
   };
 })();
 
@@ -190,6 +191,14 @@ function secretNumber() {
 
   return {
     // Code here
+    addToSecret: val => {
+      secret += val
+      return secret
+    },
+    takeAwayFromSecret: val => {
+      secret -= val
+      return secret
+    }
   };
 }
 
